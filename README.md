@@ -30,3 +30,31 @@ final Calendar tomorrow = new DeltaTimeComputer(now)
 assertThat(tomorrow.get(Calendar.YEAR), is(currentYear + 1));
 assertThat(tomorrow.get(Calendar.DAY_OF_MONTH), is(currentDay + 1));
 ```
+
+## Installation
+
+Clone this repo.
+
+```bash
+git clone https://github.com/Songbird0/deltatime-computer
+cd deltatimecomputer
+```
+
+Install `deltatime-computer` into your maven local repository.
+
+```bash
+mvn install
+```
+
+Add `deltatime-computer` package to your `pom.xml`.
+
+```xml
+    <dependency>
+      <groupId>com.github.songbird0</groupId>
+      <artifactId>deltatime-computer</artifactId>
+      <version>0.1.0-SNAPSHOT</version>
+      <scope>runtime</scope>
+    </dependency>
+```
+
+That's it!
