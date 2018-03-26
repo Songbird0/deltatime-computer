@@ -44,13 +44,6 @@ public final class DeltaTimeComputer {
             this.amount = amount;
             this.field = field;
         }
-
-        public final void incrementAmountOf(final int amountToAdd) {
-            if (amountToAdd <= 0) {
-                throw new RuntimeException("Cannot be null or negative.");
-            }
-            this.amount += amountToAdd;
-        }
     }
 
     public final DeltaTimeComputer plus(int amount) {
