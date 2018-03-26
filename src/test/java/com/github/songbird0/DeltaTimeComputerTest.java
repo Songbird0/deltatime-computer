@@ -39,12 +39,24 @@ public class DeltaTimeComputerTest {
     }
 
     @Test
-    public void alternativeToAddTwoYears() {
+    public void alternativeToAddTwoYears_1() {
         final Calendar now = new GregorianCalendar();
         final int currentYear = now.get(Calendar.YEAR);
         final Calendar tomorrow = new DeltaTimeComputer(now)
                 .plus(1)
                 .year()
+                .plus(1)
+                .year()
+                .computeIt();
+        assertThat(tomorrow.get(Calendar.YEAR), is(currentYear + 2));
+    }
+
+    @Test
+    public void alternativeToAddTwoYears_2() {
+        final Calendar now = new GregorianCalendar();
+        final int currentYear = now.get(Calendar.YEAR);
+        final Calendar tomorrow = new DeltaTimeComputer(now)
+                .plus(1)
                 .plus(1)
                 .year()
                 .computeIt();
